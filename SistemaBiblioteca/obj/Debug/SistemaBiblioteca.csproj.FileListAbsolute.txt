@@ -18,3 +18,4 @@ C:\Users\hdgab\OneDrive\Documentos\projetos\SistemaBiblioteca\SistemaBiblioteca\
 C:\Users\hdgab\OneDrive\Documentos\projetos\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.csproj.CoreCompileInputs.cache
 C:\Users\hdgab\OneDrive\Documentos\projetos\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.exe
 C:\Users\hdgab\OneDrive\Documentos\projetos\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.pdb
+C:\Users\hdgab\OneDrive\Documentos\projetos\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.UI.frmFuncionario.resources

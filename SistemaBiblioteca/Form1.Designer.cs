@@ -182,6 +182,7 @@
             this.btnFuncionarios.TabIndex = 8;
             this.btnFuncionarios.Text = "Funcionários";
             this.btnFuncionarios.UseVisualStyleBackColor = false;
+            this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
             // 
             // btnClose2
             // 

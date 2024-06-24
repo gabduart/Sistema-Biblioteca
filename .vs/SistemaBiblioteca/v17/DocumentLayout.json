@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\hdgab\\OneDrive\\Documentos\\projetos\\SistemaBiblioteca\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{608C5A7A-CD3F-421E-8C4B-CCD9A451DEA5}|SistemaBiblioteca\\SistemaBiblioteca.csproj|c:\\users\\hdgab\\onedrive\\documentos\\projetos\\sistemabiblioteca\\sistemabiblioteca\\dal\\funcionariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{608C5A7A-CD3F-421E-8C4B-CCD9A451DEA5}|SistemaBiblioteca\\SistemaBiblioteca.csproj|solutionrelative:sistemabiblioteca\\dal\\funcionariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{608C5A7A-CD3F-421E-8C4B-CCD9A451DEA5}|SistemaBiblioteca\\SistemaBiblioteca.csproj|c:\\users\\hdgab\\onedrive\\documentos\\projetos\\sistemabiblioteca\\sistemabiblioteca\\ui\\frmfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{608C5A7A-CD3F-421E-8C4B-CCD9A451DEA5}|SistemaBiblioteca\\SistemaBiblioteca.csproj|solutionrelative:sistemabiblioteca\\ui\\frmfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{608C5A7A-CD3F-421E-8C4B-CCD9A451DEA5}|SistemaBiblioteca\\SistemaBiblioteca.csproj|c:\\users\\hdgab\\onedrive\\documentos\\projetos\\sistemabiblioteca\\sistemabiblioteca\\ui\\frmfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{608C5A7A-CD3F-421E-8C4B-CCD9A451DEA5}|SistemaBiblioteca\\SistemaBiblioteca.csproj|solutionrelative:sistemabiblioteca\\ui\\frmfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{608C5A7A-CD3F-421E-8C4B-CCD9A451DEA5}|SistemaBiblioteca\\SistemaBiblioteca.csproj|c:\\users\\hdgab\\onedrive\\documentos\\projetos\\sistemabiblioteca\\sistemabiblioteca\\bll\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{608C5A7A-CD3F-421E-8C4B-CCD9A451DEA5}|SistemaBiblioteca\\SistemaBiblioteca.csproj|solutionrelative:sistemabiblioteca\\bll\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{608C5A7A-CD3F-421E-8C4B-CCD9A451DEA5}|SistemaBiblioteca\\SistemaBiblioteca.csproj|c:\\users\\hdgab\\onedrive\\documentos\\projetos\\sistemabiblioteca\\sistemabiblioteca\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{608C5A7A-CD3F-421E-8C4B-CCD9A451DEA5}|SistemaBiblioteca\\SistemaBiblioteca.csproj|solutionrelative:sistemabiblioteca\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -18,24 +34,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmFuncionario.cs",
+              "DocumentMoniker": "C:\\Users\\hdgab\\OneDrive\\Documentos\\projetos\\SistemaBiblioteca\\SistemaBiblioteca\\UI\\frmFuncionario.cs",
+              "RelativeDocumentMoniker": "SistemaBiblioteca\\UI\\frmFuncionario.cs",
+              "ToolTip": "C:\\Users\\hdgab\\OneDrive\\Documentos\\projetos\\SistemaBiblioteca\\SistemaBiblioteca\\UI\\frmFuncionario.cs",
+              "RelativeToolTip": "SistemaBiblioteca\\UI\\frmFuncionario.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAUwHwAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T23:03:24.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmFuncionario.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\hdgab\\OneDrive\\Documentos\\projetos\\SistemaBiblioteca\\SistemaBiblioteca\\UI\\frmFuncionario.cs",
+              "RelativeDocumentMoniker": "SistemaBiblioteca\\UI\\frmFuncionario.cs",
+              "ToolTip": "C:\\Users\\hdgab\\OneDrive\\Documentos\\projetos\\SistemaBiblioteca\\SistemaBiblioteca\\UI\\frmFuncionario.cs [Design]",
+              "RelativeToolTip": "SistemaBiblioteca\\UI\\frmFuncionario.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T22:50:30.821Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FuncionarioDAL.cs",
+              "DocumentMoniker": "C:\\Users\\hdgab\\OneDrive\\Documentos\\projetos\\SistemaBiblioteca\\SistemaBiblioteca\\DAL\\FuncionarioDAL.cs",
+              "RelativeDocumentMoniker": "SistemaBiblioteca\\DAL\\FuncionarioDAL.cs",
+              "ToolTip": "C:\\Users\\hdgab\\OneDrive\\Documentos\\projetos\\SistemaBiblioteca\\SistemaBiblioteca\\DAL\\FuncionarioDAL.cs",
+              "RelativeToolTip": "SistemaBiblioteca\\DAL\\FuncionarioDAL.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAiwDoAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T22:39:49.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Funcionario.cs",
+              "DocumentMoniker": "C:\\Users\\hdgab\\OneDrive\\Documentos\\projetos\\SistemaBiblioteca\\SistemaBiblioteca\\BLL\\Funcionario.cs",
+              "RelativeDocumentMoniker": "SistemaBiblioteca\\BLL\\Funcionario.cs",
+              "ToolTip": "C:\\Users\\hdgab\\OneDrive\\Documentos\\projetos\\SistemaBiblioteca\\SistemaBiblioteca\\BLL\\Funcionario.cs",
+              "RelativeToolTip": "SistemaBiblioteca\\BLL\\Funcionario.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAmwBUAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T22:21:34.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\hdgab\\OneDrive\\Documentos\\projetos\\SistemaBiblioteca\\SistemaBiblioteca\\Form1.cs",
               "RelativeDocumentMoniker": "SistemaBiblioteca\\Form1.cs",
               "ToolTip": "C:\\Users\\hdgab\\OneDrive\\Documentos\\projetos\\SistemaBiblioteca\\SistemaBiblioteca\\Form1.cs",
               "RelativeToolTip": "SistemaBiblioteca\\Form1.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAABoAAAAUAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAiwCEAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-22T23:30:48.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hdgab\\OneDrive\\Documentos\\projetos\\SistemaBiblioteca\\SistemaBiblioteca\\Form1.cs",
               "RelativeDocumentMoniker": "SistemaBiblioteca\\Form1.cs",

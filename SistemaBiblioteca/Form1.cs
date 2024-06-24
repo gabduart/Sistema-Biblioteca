@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaBiblioteca.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,12 @@ namespace SistemaBiblioteca
         private void btnClose2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnFuncionarios_Click(object sender, EventArgs e)
+        {
+            frmFuncionario form = new frmFuncionario();
+            form.ShowDialog();
         }
     }
 }
