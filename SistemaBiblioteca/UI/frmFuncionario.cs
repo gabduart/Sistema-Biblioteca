@@ -41,6 +41,7 @@ namespace SistemaBiblioteca.UI
         private void frmFuncionario_Load(object sender, EventArgs e)
         {
             dgvConsultaFunc.DataSource = funcDAL.Consult();
+            dgvConsultaExFunc.DataSource = funcDAL.ConsultEx();
         }
 
         private void btnLimparFunc_MouseHover(object sender, EventArgs e)
@@ -166,6 +167,7 @@ namespace SistemaBiblioteca.UI
                     func.Idfuncionario = Convert.ToInt16(dgvConsultaFunc[0, dgvConsultaFunc.CurrentRow.Index].Value);
                     funcDAL.Delete(func);
                     dgvConsultaFunc.DataSource = funcDAL.Consult();
+                    dgvConsultaExFunc.DataSource = funcDAL.ConsultEx();
                 }
             }
         }
@@ -203,6 +205,27 @@ namespace SistemaBiblioteca.UI
         private void btnRealocarFunc_MouseLeave(object sender, EventArgs e)
         {
             Hover(btnRealocarFunc, "Transparent", "Black");
+        }
+
+        private void btnRealocarFunc_Click(object sender, EventArgs e)
+        {
+            if (dgvConsultaExFunc.RowCount > 0)
+            {
+                if (MessageBox.Show("Deseja mesmo realocar o funcionário?", "Realocar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    func.Idfuncionario = Convert.ToInt16(dgvConsultaExFunc[0, dgvConsultaExFunc.CurrentRow.Index].Value);
+                    funcDAL.Relocate(func);
+                    dgvConsultaFunc.DataSource = funcDAL.Consult();
+                    dgvConsultaExFunc.DataSource = funcDAL.ConsultEx();
+                }
+            }
+        }
+
+        private void txtExFunc_KeyUp(object sender, KeyEventArgs e)
+        {
+            func.Nome = txtExFunc.Text;
+            dgvConsultaExFunc.DataSource = funcDAL.SearchEx(func);
         }
     }
 }

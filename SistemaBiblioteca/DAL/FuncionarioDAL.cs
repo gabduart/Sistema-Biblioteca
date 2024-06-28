@@ -121,5 +121,34 @@ namespace SistemaBiblioteca.DAL
             conn.Disconnect();
             return dataTable;
         }
+
+        public DataTable ConsultEx()
+        {
+            SqlDataAdapter dAdapter = new SqlDataAdapter(@"SELECT * FROM vwExFuncionario", conn.Connect());
+            DataTable dTable = new DataTable();
+            dAdapter.Fill(dTable);
+            conn.Disconnect();
+            return dTable;
+        }
+
+        public void Relocate(BLL.Funcionario func)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UPDATE Funcionarios SET Visible = 1 WHERE FuncionarioID = @IdFunc";
+            cmd.Parameters.AddWithValue("@IdFunc", func.Idfuncionario);
+            cmd.Connection = conn.Connect();
+            cmd.ExecuteNonQuery();
+            conn.Disconnect();
+        }
+
+        public DataTable SearchEx(BLL.Funcionario func)
+        {
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Funcionarios WHERE Nome LIKE @Nome AND Visible = 0", conn.Connect());
+            dataAdapter.SelectCommand.Parameters.AddWithValue("@Nome", "%" + func.Nome + "%");
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            conn.Disconnect();
+            return dataTable;
+        }
     }
 }

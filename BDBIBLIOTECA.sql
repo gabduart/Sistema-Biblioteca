@@ -395,3 +395,22 @@ FROM Funcionarios f
 WHERE Visible = 1;
 -- DROP VIEW vwFuncionario
 SELECT * FROM vwFuncionario;
+
+GO
+CREATE VIEW vwExFuncionario
+AS
+SELECT	f.FuncionarioID AS 'Código do Funcionário',
+		f.Nome,
+		f.Cargo,
+		f.DataContratacao AS 'Data de Contratação',
+		f.Salario AS 'Salário',
+		f.Telefone,
+		f.Email AS 'E-mail',
+		f.Endereco AS 'Endereço',
+		f.DataNascimento AS 'Data de Nascimento',
+		f.Observacoes AS 'Observações'
+		-- f.Visible
+FROM Funcionarios f
+WHERE Visible = 0;
+-- DROP VIEW vwExFuncionario
+SELECT * FROM vwExFuncionario;

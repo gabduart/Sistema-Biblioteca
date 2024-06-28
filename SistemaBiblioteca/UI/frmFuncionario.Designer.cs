@@ -433,6 +433,7 @@
             this.btnRealocarFunc.TabIndex = 26;
             this.btnRealocarFunc.Text = "Realocar";
             this.btnRealocarFunc.UseVisualStyleBackColor = false;
+            this.btnRealocarFunc.Click += new System.EventHandler(this.btnRealocarFunc_Click);
             this.btnRealocarFunc.MouseLeave += new System.EventHandler(this.btnRealocarFunc_MouseLeave);
             this.btnRealocarFunc.MouseHover += new System.EventHandler(this.btnRealocarFunc_MouseHover);
             // 
@@ -444,6 +445,7 @@
             this.txtExFunc.Name = "txtExFunc";
             this.txtExFunc.Size = new System.Drawing.Size(338, 24);
             this.txtExFunc.TabIndex = 24;
+            this.txtExFunc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtExFunc_KeyUp);
             // 
             // label11
             // 
