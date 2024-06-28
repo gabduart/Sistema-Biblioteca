@@ -1,6 +1,6 @@
 /*
     USE master;
-    DROP DATABASE IF EXISTS BibliotecaDB;
+    DROP DATABASE BibliotecaDB;
 */
 CREATE DATABASE BibliotecaDB;
 
@@ -94,17 +94,7 @@ CREATE TABLE Reservas (
     CONSTRAINT FK_UsuarioReserva FOREIGN KEY (UsuarioID) REFERENCES Usuarios(UsuarioID)
 );
 
--- Tabela de Histórico de Empréstimos
-CREATE TABLE HistoricoEmprestimos (
-    HistoricoID INT CONSTRAINT PK_HistoricoId PRIMARY KEY IDENTITY,
-    LivroID INT,
-    UsuarioID INT,
-    DataEmprestimo DATE,
-    DataDevolucao DATE,
-    CONSTRAINT FK_LivroHistorico FOREIGN KEY (LivroID) REFERENCES Livros(LivroID),
-    CONSTRAINT FK_UsuarioHistorico FOREIGN KEY (UsuarioID) REFERENCES Usuarios(UsuarioID)
-);
-
+-- Tabela de Funcionarios
 CREATE TABLE Funcionarios (
     FuncionarioID INT PRIMARY KEY IDENTITY,
     Nome VARCHAR(255) NOT NULL,
@@ -117,6 +107,9 @@ CREATE TABLE Funcionarios (
     DataNascimento DATE,
     Observacoes TEXT
 );
+-- ALTER TABLE Funcionarios ADD Visible BIT;
+-- ALTER TABLE Funcionarios ADD CONSTRAINT DF_Funcionarios_Visible DEFAULT 1 FOR Visible;
+-- UPDATE Funcionarios SET Visible = 1 WHERE ;
 
 
 -- Inserção de todos os códigos da Classificação Dewey
@@ -254,8 +247,8 @@ INSERT INTO Livros (ISBN, Titulo, Subtitulo, AutorID, EditorID, DataPublicacao, 
 
 -- Inserções na tabela Exemplares
 INSERT INTO Exemplares (LivroID, Status, Localizacao, DataAquisicao, Observacoes) VALUES 
-(3, 'Disponível', 'Estante A', '2023-01-10', 'Exemplar em bom estado.'),
-(4, 'Emprestado', 'Estante B', '2023-02-05', 'Empréstimo válido até 2023-03-05.');
+(1, 'Disponível', 'Estante A', '2023-01-10', 'Exemplar em bom estado.'),
+(2, 'Emprestado', 'Estante B', '2023-02-05', 'Empréstimo válido até 2023-03-05.');
 
 -- Inserções na tabela Usuarios
 INSERT INTO Usuarios (Nome, Endereco, Telefone, Email, DataCadastro) VALUES 
@@ -264,18 +257,13 @@ INSERT INTO Usuarios (Nome, Endereco, Telefone, Email, DataCadastro) VALUES
 
 -- Inserções na tabela Emprestimos
 INSERT INTO Emprestimos (LivroID, UsuarioID, DataEmprestimo, DataDevolucaoPrevista, DataDevolucao) VALUES 
-(3, 1, GETDATE(), '2023-01-20', NULL),
-(4, 2, '2023-02-10', '2023-03-10', NULL);
+(1, 1, GETDATE(), '2023-01-20', NULL),
+(2, 2, '2023-02-10', '2023-03-10', NULL);
 
 -- Inserções na tabela Reservas
 INSERT INTO Reservas (LivroID, UsuarioID, DataReserva, Status) VALUES 
-(3, 2, GETDATE(), 'Pendente'),
-(4, 1, '2023-02-01', 'Pendente');
-
--- Inserções na tabela HistoricoEmprestimos
-INSERT INTO HistoricoEmprestimos (LivroID, UsuarioID, DataEmprestimo, DataDevolucao) VALUES 
-(3, 1, '2023-01-10', '2023-01-20'),
-(4, 2, '2023-02-10', '2023-03-10');
+(1, 2, GETDATE(), 'Pendente'),
+(2, 1, '2023-02-01', 'Pendente');
 
 -- Inserções na tabela Funcionarios
 INSERT INTO Funcionarios (Nome, Cargo, DataContratacao, Salario, Telefone, Email, Endereco, DataNascimento, Observacoes) VALUES 
@@ -295,22 +283,115 @@ SELECT * FROM Categorias;
 SELECT * FROM ClassificacaoDewey;
 
 -- Selecionar todos os registros da tabela Livros
-SELECT * FROM Livros;
+-- SELECT * FROM Livros;
+GO 
+CREATE VIEW vwLivros
+AS
+SELECT	l.LivroID AS 'Código do Livro',
+		l.ISBN,
+		l.Titulo AS 'Título',
+		l.Subtitulo AS 'Subtítulo',
+		a.Nome AS 'Autor',
+		e.Nome AS 'Editor',
+		l.DataPublicacao AS 'Data de Publicação',
+		l.Edicao AS 'Edição',
+		c.Nome AS 'Categoria',
+		cl.Descricao AS 'Classificação de Dewey',
+		l.PalavrasChave AS 'Palavras Chave',
+		l.NumeroPaginas AS 'Número de Páginas',
+		l.Dimensoes AS 'Dimensões',
+		l.Peso,
+		l.Resumo,
+		l.ImagemCapa AS 'Imagem da Capa'
+FROM Livros l
+INNER JOIN Autores a ON a.AutorID = l.AutorID
+INNER JOIN Editores e ON e.EditorID = l.EditorID
+INNER JOIN Categorias c ON c.CategoriaID = l.CategoriaID
+INNER JOIN ClassificacaoDewey cl ON cl.ClassificacaoID = l.ClassificacaoID;
+
+SELECT * FROM vwLivros;
 
 -- Selecionar todos os registros da tabela Exemplares
-SELECT * FROM Exemplares;
+-- SELECT * FROM Exemplares;
+GO 
+CREATE VIEW vwExemplares
+AS
+SELECT	e.ExemplarID AS 'Código do Exemplar',
+		l.Titulo AS 'Título',
+		e.Status,
+		e.Localizacao AS 'Localização',
+		e.DataAquisicao AS 'Data de Aquisição',
+		e.Observacoes AS 'Observações'
+FROM Exemplares e
+INNER JOIN Livros l ON l.LivroID = e.LivroID;
+
+SELECT * FROM vwExemplares;
 
 -- Selecionar todos os registros da tabela Usuarios
-SELECT * FROM Usuarios;
+-- SELECT * FROM Usuarios;
+GO 
+CREATE VIEW vwUsuarios
+AS
+SELECT	u.UsuarioID AS 'Código do Usuário',
+		u.Nome,
+		u.Endereco AS 'Endereço',
+		u.Telefone,
+		u.Email AS 'E-mail',
+		u.DataCadastro AS 'Data de Cadastro'
+FROM Usuarios u;
+
+SELECT * FROM vwUsuarios;
 
 -- Selecionar todos os registros da tabela Emprestimos
-SELECT * FROM Emprestimos;
+-- SELECT * FROM Emprestimos;
+GO 
+CREATE VIEW vwEmprestimos
+AS
+SELECT	e.EmprestimoID,
+		l.Titulo AS 'Título',
+		u.Nome AS 'Usuário',
+		e.DataEmprestimo AS 'Data de Empréstimo',
+		e.DataDevolucaoPrevista AS 'Data de Devolução Prevista',
+		e.DataDevolucao AS 'Data de Devolução'
+FROM Emprestimos e
+INNER JOIN Livros l ON l.LivroID = e.LivroID
+INNER JOIN Usuarios u ON u.UsuarioID = e.UsuarioID;
+
+SELECT * FROM vwEmprestimos;
 
 -- Selecionar todos os registros da tabela Reservas
-SELECT * FROM Reservas;
+-- SELECT * FROM Reservas;
+GO
+CREATE VIEW vwReservas
+AS
+SELECT	r.ReservaID AS 'Código da Reserva',
+		l.Titulo AS 'Título',
+		u.Nome AS 'Usuário',
+		r.DataReserva AS 'Data de Reserva',
+		r.Status
+FROM Reservas r
+INNER JOIN Livros l ON l.LivroID = r.LivroID
+INNER JOIN Usuarios u ON u.UsuarioID = r.UsuarioID;
 
--- Selecionar todos os registros da tabela HistoricoEmprestimos
-SELECT * FROM HistoricoEmprestimos;
+SELECT * FROM vwReservas;
 
 -- Selecionar todos os registros da tabela Funcionarios
-SELECT * FROM Funcionarios;
+-- SELECT * FROM Funcionarios;
+GO
+CREATE VIEW vwFuncionario
+AS
+SELECT	f.FuncionarioID AS 'Código do Funcionário',
+		f.Nome,
+		f.Cargo,
+		f.DataContratacao AS 'Data de Contratação',
+		f.Salario AS 'Salário',
+		f.Telefone,
+		f.Email AS 'E-mail',
+		f.Endereco AS 'Endereço',
+		f.DataNascimento AS 'Data de Nascimento',
+		f.Observacoes AS 'Observações'
+		-- f.Visible
+FROM Funcionarios f
+WHERE Visible = 1;
+-- DROP VIEW vwFuncionario
+SELECT * FROM vwFuncionario;

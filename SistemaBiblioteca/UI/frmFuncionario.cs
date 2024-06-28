@@ -90,6 +90,33 @@ namespace SistemaBiblioteca.UI
 
         private void btnCadastrarFunc_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtNomeFunc.Text) ||
+                string.IsNullOrWhiteSpace(txtCargoFunc.Text) ||
+                string.IsNullOrWhiteSpace(mtxtContratacaoFunc.Text) ||
+                string.IsNullOrWhiteSpace(txtSalarioFunc.Text) ||
+                string.IsNullOrWhiteSpace(txtTelefoneFunc.Text) ||
+                string.IsNullOrWhiteSpace(txtEmailFunc.Text) ||
+                string.IsNullOrWhiteSpace(txtEnderecoFunc.Text) ||
+                string.IsNullOrWhiteSpace(mtxtNascFunc.Text) ||
+                string.IsNullOrWhiteSpace(txtObservFunc.Text))
+            {
+                MessageBox.Show("Todos os campos devem ser preenchidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!DateTime.TryParse(mtxtContratacaoFunc.Text, out DateTime dataContratacao) ||
+                !DateTime.TryParse(mtxtNascFunc.Text, out DateTime dataNascimento))
+            {
+                MessageBox.Show("Datas inválidas!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!double.TryParse(txtSalarioFunc.Text, out double salario))
+            {
+                MessageBox.Show("Salário inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             func.Nome = txtNomeFunc.Text;
             func.Cargo = txtCargoFunc.Text;
             func.DataContratacao = Convert.ToDateTime(mtxtContratacaoFunc.Text);
@@ -100,9 +127,25 @@ namespace SistemaBiblioteca.UI
             func.Nascimento = Convert.ToDateTime(mtxtNascFunc.Text);
             func.Observacoes = txtObservFunc.Text;
 
-            funcDAL.Register(func);
-            MessageBox.Show("Dados gravados com sucesso!");
-            
+            if (btnCadastrarFunc.Text == "Atualizar")
+            {
+                funcDAL.Update(func);
+                MessageBox.Show("Dados gravados com sucesso!");
+
+                btnCadastrarFunc.Text = "Cadastrar";
+                btnCadastrarFunc.Width -= 20;
+                btnCadastrarFunc.Left += 20;
+                btnLimparFunc.Left += 20;
+
+                txtNomeFunc.Focus();
+            }
+            else
+            {
+                funcDAL.Register(func);
+                MessageBox.Show("Dados gravados com sucesso!");
+                txtNomeFunc.Focus();
+            }
+
             FormClear();
             dgvConsultaFunc.DataSource = funcDAL.Consult();
         }
@@ -110,7 +153,7 @@ namespace SistemaBiblioteca.UI
         private void txtConsultaFunc_KeyUp(object sender, KeyEventArgs e)
         {
             func.Nome = txtConsultaFunc.Text;
-            
+            dgvConsultaFunc.DataSource = funcDAL.Search(func);
         }
 
         private void btnExcluirFunc_Click(object sender, EventArgs e)
@@ -125,6 +168,41 @@ namespace SistemaBiblioteca.UI
                     dgvConsultaFunc.DataSource = funcDAL.Consult();
                 }
             }
+        }
+
+        private void btnEditarFunc_Click(object sender, EventArgs e)
+        {
+            if (dgvConsultaFunc.RowCount > 0)
+            {
+                func.Idfuncionario = Convert.ToInt16(dgvConsultaFunc[0, dgvConsultaFunc.CurrentRow.Index].Value);
+                func = funcDAL.Return(func);
+                txtNomeFunc.Text = func.Nome;
+                txtCargoFunc.Text = func.Cargo;
+                mtxtContratacaoFunc.Text = func.DataContratacao.ToString();
+                txtSalarioFunc.Text = func.Salario.ToString();
+                txtTelefoneFunc.Text = func.Telefone;
+                txtEmailFunc.Text = func.Email;
+                txtEnderecoFunc.Text = func.Endereco;
+                mtxtNascFunc.Text = func.Nascimento.ToString();
+                txtObservFunc.Text = func.Observacoes;
+
+                tabControl1.SelectedTab = tabPage1;
+
+                btnCadastrarFunc.Text = "Atualizar";
+                btnCadastrarFunc.Width += 20;
+                btnCadastrarFunc.Left -= 20;
+                btnLimparFunc.Left -= 20;
+            }
+        }
+
+        private void btnRealocarFunc_MouseHover(object sender, EventArgs e)
+        {
+            Hover(btnRealocarFunc, "Black", "White");
+        }
+
+        private void btnRealocarFunc_MouseLeave(object sender, EventArgs e)
+        {
+            Hover(btnRealocarFunc, "Transparent", "Black");
         }
     }
 }

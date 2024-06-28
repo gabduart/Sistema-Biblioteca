@@ -18,6 +18,7 @@ namespace SistemaBiblioteca.BLL
         private string endereco;
         private DateTime nascimento;
         private string observacoes;
+        private int visible;
 
         public int Idfuncionario { get => idfuncionario; set => idfuncionario = value; }
         public string Nome { get => nome; set => nome = value; }
@@ -29,5 +30,6 @@ namespace SistemaBiblioteca.BLL
         public string Endereco { get => endereco; set => endereco = value; }
         public DateTime Nascimento { get => nascimento; set => nascimento = value; }
         public string Observacoes { get => observacoes; set => observacoes = value; }
+        public int Visible { get => visible; set => visible = value; }
     }
 }

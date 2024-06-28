@@ -30,42 +30,50 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnLimparFunc = new System.Windows.Forms.Button();
+            this.btnCadastrarFunc = new System.Windows.Forms.Button();
+            this.txtObservFunc = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.mtxtNascFunc = new System.Windows.Forms.MaskedTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEnderecoFunc = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtEmailFunc = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTelefoneFunc = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSalarioFunc = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.mtxtContratacaoFunc = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCargoFunc = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNomeFunc = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtConsultaFunc = new System.Windows.Forms.TextBox();
+            this.dgvConsultaFunc = new System.Windows.Forms.DataGridView();
             this.btnExcluirFunc = new System.Windows.Forms.Button();
             this.btnEditarFunc = new System.Windows.Forms.Button();
-            this.dgvConsultaFunc = new System.Windows.Forms.DataGridView();
-            this.btnCadastrarFunc = new System.Windows.Forms.Button();
-            this.btnLimparFunc = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNomeFunc = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCargoFunc = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.mtxtContratacaoFunc = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtSalarioFunc = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtTelefoneFunc = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtEmailFunc = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtEnderecoFunc = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.mtxtNascFunc = new System.Windows.Forms.MaskedTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtObservFunc = new System.Windows.Forms.TextBox();
+            this.txtConsultaFunc = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgvConsultaExFunc = new System.Windows.Forms.DataGridView();
+            this.btnRealocarFunc = new System.Windows.Forms.Button();
+            this.txtExFunc = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaFunc)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaExFunc)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -104,6 +112,193 @@
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnLimparFunc
+            // 
+            this.btnLimparFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimparFunc.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimparFunc.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnLimparFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimparFunc.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.btnLimparFunc.ForeColor = System.Drawing.Color.Red;
+            this.btnLimparFunc.Location = new System.Drawing.Point(386, 264);
+            this.btnLimparFunc.Name = "btnLimparFunc";
+            this.btnLimparFunc.Size = new System.Drawing.Size(107, 32);
+            this.btnLimparFunc.TabIndex = 19;
+            this.btnLimparFunc.Text = "Limpar";
+            this.btnLimparFunc.UseVisualStyleBackColor = false;
+            this.btnLimparFunc.Click += new System.EventHandler(this.btnLimparFunc_Click);
+            this.btnLimparFunc.MouseLeave += new System.EventHandler(this.btnLimparFunc_MouseLeave);
+            this.btnLimparFunc.MouseHover += new System.EventHandler(this.btnLimparFunc_MouseHover);
+            // 
+            // btnCadastrarFunc
+            // 
+            this.btnCadastrarFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastrarFunc.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarFunc.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCadastrarFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarFunc.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCadastrarFunc.ForeColor = System.Drawing.Color.Black;
+            this.btnCadastrarFunc.Location = new System.Drawing.Point(499, 264);
+            this.btnCadastrarFunc.Name = "btnCadastrarFunc";
+            this.btnCadastrarFunc.Size = new System.Drawing.Size(107, 32);
+            this.btnCadastrarFunc.TabIndex = 18;
+            this.btnCadastrarFunc.Text = "Cadastrar";
+            this.btnCadastrarFunc.UseVisualStyleBackColor = false;
+            this.btnCadastrarFunc.Click += new System.EventHandler(this.btnCadastrarFunc_Click);
+            this.btnCadastrarFunc.MouseLeave += new System.EventHandler(this.btnCadastrarFunc_MouseLeave);
+            this.btnCadastrarFunc.MouseHover += new System.EventHandler(this.btnCadastrarFunc_MouseHover);
+            // 
+            // txtObservFunc
+            // 
+            this.txtObservFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtObservFunc.Location = new System.Drawing.Point(432, 39);
+            this.txtObservFunc.Multiline = true;
+            this.txtObservFunc.Name = "txtObservFunc";
+            this.txtObservFunc.Size = new System.Drawing.Size(174, 185);
+            this.txtObservFunc.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(428, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 19);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Observações:";
+            // 
+            // mtxtNascFunc
+            // 
+            this.mtxtNascFunc.Location = new System.Drawing.Point(227, 200);
+            this.mtxtNascFunc.Mask = "00/00/0000";
+            this.mtxtNascFunc.Name = "mtxtNascFunc";
+            this.mtxtNascFunc.Size = new System.Drawing.Size(174, 24);
+            this.mtxtNascFunc.TabIndex = 15;
+            this.mtxtNascFunc.ValidatingType = typeof(System.DateTime);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(223, 176);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(157, 19);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Data de Nascimento:";
+            // 
+            // txtEnderecoFunc
+            // 
+            this.txtEnderecoFunc.Location = new System.Drawing.Point(227, 147);
+            this.txtEnderecoFunc.Name = "txtEnderecoFunc";
+            this.txtEnderecoFunc.Size = new System.Drawing.Size(174, 24);
+            this.txtEnderecoFunc.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(223, 122);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 19);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Endereço:";
+            // 
+            // txtEmailFunc
+            // 
+            this.txtEmailFunc.Location = new System.Drawing.Point(227, 93);
+            this.txtEmailFunc.Name = "txtEmailFunc";
+            this.txtEmailFunc.Size = new System.Drawing.Size(174, 24);
+            this.txtEmailFunc.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(223, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 19);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Email:";
+            // 
+            // txtTelefoneFunc
+            // 
+            this.txtTelefoneFunc.Location = new System.Drawing.Point(227, 39);
+            this.txtTelefoneFunc.Name = "txtTelefoneFunc";
+            this.txtTelefoneFunc.Size = new System.Drawing.Size(174, 24);
+            this.txtTelefoneFunc.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(223, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 19);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Telefone:";
+            // 
+            // txtSalarioFunc
+            // 
+            this.txtSalarioFunc.Location = new System.Drawing.Point(22, 200);
+            this.txtSalarioFunc.Name = "txtSalarioFunc";
+            this.txtSalarioFunc.Size = new System.Drawing.Size(174, 24);
+            this.txtSalarioFunc.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 176);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 19);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Salário:";
+            // 
+            // mtxtContratacaoFunc
+            // 
+            this.mtxtContratacaoFunc.Location = new System.Drawing.Point(22, 147);
+            this.mtxtContratacaoFunc.Mask = "00/00/0000";
+            this.mtxtContratacaoFunc.Name = "mtxtContratacaoFunc";
+            this.mtxtContratacaoFunc.Size = new System.Drawing.Size(174, 24);
+            this.mtxtContratacaoFunc.TabIndex = 5;
+            this.mtxtContratacaoFunc.ValidatingType = typeof(System.DateTime);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 19);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Data de Contratação:";
+            // 
+            // txtCargoFunc
+            // 
+            this.txtCargoFunc.Location = new System.Drawing.Point(22, 93);
+            this.txtCargoFunc.Name = "txtCargoFunc";
+            this.txtCargoFunc.Size = new System.Drawing.Size(174, 24);
+            this.txtCargoFunc.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Cargo:";
+            // 
+            // txtNomeFunc
+            // 
+            this.txtNomeFunc.Location = new System.Drawing.Point(22, 39);
+            this.txtNomeFunc.Name = "txtNomeFunc";
+            this.txtNomeFunc.Size = new System.Drawing.Size(174, 24);
+            this.txtNomeFunc.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nome:";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dgvConsultaFunc);
@@ -119,24 +314,23 @@
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // dgvConsultaFunc
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 12);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(147, 19);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Pesquisar por nome:";
-            // 
-            // txtConsultaFunc
-            // 
-            this.txtConsultaFunc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvConsultaFunc.AllowUserToAddRows = false;
+            this.dgvConsultaFunc.AllowUserToDeleteRows = false;
+            this.dgvConsultaFunc.AllowUserToResizeColumns = false;
+            this.dgvConsultaFunc.AllowUserToResizeRows = false;
+            this.dgvConsultaFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtConsultaFunc.Location = new System.Drawing.Point(22, 36);
-            this.txtConsultaFunc.Name = "txtConsultaFunc";
-            this.txtConsultaFunc.Size = new System.Drawing.Size(338, 24);
-            this.txtConsultaFunc.TabIndex = 2;
-            this.txtConsultaFunc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtConsultaFunc_KeyUp);
+            this.dgvConsultaFunc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvConsultaFunc.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvConsultaFunc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvConsultaFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultaFunc.Location = new System.Drawing.Point(22, 66);
+            this.dgvConsultaFunc.Name = "dgvConsultaFunc";
+            this.dgvConsultaFunc.Size = new System.Drawing.Size(587, 232);
+            this.dgvConsultaFunc.TabIndex = 22;
             // 
             // btnExcluirFunc
             // 
@@ -170,213 +364,95 @@
             this.btnEditarFunc.TabIndex = 20;
             this.btnEditarFunc.Text = "Editar";
             this.btnEditarFunc.UseVisualStyleBackColor = false;
+            this.btnEditarFunc.Click += new System.EventHandler(this.btnEditarFunc_Click);
             this.btnEditarFunc.MouseLeave += new System.EventHandler(this.btnEditarFunc_MouseLeave);
             this.btnEditarFunc.MouseHover += new System.EventHandler(this.btnEditarFunc_MouseHover);
             // 
-            // dgvConsultaFunc
+            // txtConsultaFunc
             // 
-            this.dgvConsultaFunc.AllowUserToAddRows = false;
-            this.dgvConsultaFunc.AllowUserToDeleteRows = false;
-            this.dgvConsultaFunc.AllowUserToResizeColumns = false;
-            this.dgvConsultaFunc.AllowUserToResizeRows = false;
-            this.dgvConsultaFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtConsultaFunc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConsultaFunc.Location = new System.Drawing.Point(22, 36);
+            this.txtConsultaFunc.Name = "txtConsultaFunc";
+            this.txtConsultaFunc.Size = new System.Drawing.Size(338, 24);
+            this.txtConsultaFunc.TabIndex = 2;
+            this.txtConsultaFunc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtConsultaFunc_KeyUp);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(18, 12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(147, 19);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Pesquisar por nome:";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dgvConsultaExFunc);
+            this.tabPage3.Controls.Add(this.btnRealocarFunc);
+            this.tabPage3.Controls.Add(this.txtExFunc);
+            this.tabPage3.Controls.Add(this.label11);
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(631, 304);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Ex - Funcionários";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dgvConsultaExFunc
+            // 
+            this.dgvConsultaExFunc.AllowUserToAddRows = false;
+            this.dgvConsultaExFunc.AllowUserToDeleteRows = false;
+            this.dgvConsultaExFunc.AllowUserToResizeColumns = false;
+            this.dgvConsultaExFunc.AllowUserToResizeRows = false;
+            this.dgvConsultaExFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvConsultaFunc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvConsultaFunc.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvConsultaFunc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvConsultaFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultaFunc.Location = new System.Drawing.Point(22, 66);
-            this.dgvConsultaFunc.Name = "dgvConsultaFunc";
-            this.dgvConsultaFunc.Size = new System.Drawing.Size(587, 232);
-            this.dgvConsultaFunc.TabIndex = 22;
+            this.dgvConsultaExFunc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvConsultaExFunc.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvConsultaExFunc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvConsultaExFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultaExFunc.Location = new System.Drawing.Point(24, 63);
+            this.dgvConsultaExFunc.Name = "dgvConsultaExFunc";
+            this.dgvConsultaExFunc.Size = new System.Drawing.Size(587, 232);
+            this.dgvConsultaExFunc.TabIndex = 27;
             // 
-            // btnCadastrarFunc
+            // btnRealocarFunc
             // 
-            this.btnCadastrarFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCadastrarFunc.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastrarFunc.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCadastrarFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarFunc.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCadastrarFunc.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastrarFunc.Location = new System.Drawing.Point(499, 264);
-            this.btnCadastrarFunc.Name = "btnCadastrarFunc";
-            this.btnCadastrarFunc.Size = new System.Drawing.Size(107, 32);
-            this.btnCadastrarFunc.TabIndex = 18;
-            this.btnCadastrarFunc.Text = "Cadastrar";
-            this.btnCadastrarFunc.UseVisualStyleBackColor = false;
-            this.btnCadastrarFunc.Click += new System.EventHandler(this.btnCadastrarFunc_Click);
-            this.btnCadastrarFunc.MouseLeave += new System.EventHandler(this.btnCadastrarFunc_MouseLeave);
-            this.btnCadastrarFunc.MouseHover += new System.EventHandler(this.btnCadastrarFunc_MouseHover);
+            this.btnRealocarFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRealocarFunc.BackColor = System.Drawing.Color.Transparent;
+            this.btnRealocarFunc.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRealocarFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRealocarFunc.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.btnRealocarFunc.ForeColor = System.Drawing.Color.Black;
+            this.btnRealocarFunc.Location = new System.Drawing.Point(504, 25);
+            this.btnRealocarFunc.Name = "btnRealocarFunc";
+            this.btnRealocarFunc.Size = new System.Drawing.Size(107, 32);
+            this.btnRealocarFunc.TabIndex = 26;
+            this.btnRealocarFunc.Text = "Realocar";
+            this.btnRealocarFunc.UseVisualStyleBackColor = false;
+            this.btnRealocarFunc.MouseLeave += new System.EventHandler(this.btnRealocarFunc_MouseLeave);
+            this.btnRealocarFunc.MouseHover += new System.EventHandler(this.btnRealocarFunc_MouseHover);
             // 
-            // btnLimparFunc
+            // txtExFunc
             // 
-            this.btnLimparFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLimparFunc.BackColor = System.Drawing.Color.Transparent;
-            this.btnLimparFunc.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnLimparFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimparFunc.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btnLimparFunc.ForeColor = System.Drawing.Color.Red;
-            this.btnLimparFunc.Location = new System.Drawing.Point(386, 264);
-            this.btnLimparFunc.Name = "btnLimparFunc";
-            this.btnLimparFunc.Size = new System.Drawing.Size(107, 32);
-            this.btnLimparFunc.TabIndex = 19;
-            this.btnLimparFunc.Text = "Limpar";
-            this.btnLimparFunc.UseVisualStyleBackColor = false;
-            this.btnLimparFunc.Click += new System.EventHandler(this.btnLimparFunc_Click);
-            this.btnLimparFunc.MouseLeave += new System.EventHandler(this.btnLimparFunc_MouseLeave);
-            this.btnLimparFunc.MouseHover += new System.EventHandler(this.btnLimparFunc_MouseHover);
+            this.txtExFunc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtExFunc.Location = new System.Drawing.Point(24, 33);
+            this.txtExFunc.Name = "txtExFunc";
+            this.txtExFunc.Size = new System.Drawing.Size(338, 24);
+            this.txtExFunc.TabIndex = 24;
             // 
-            // label1
+            // label11
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome:";
-            // 
-            // txtNomeFunc
-            // 
-            this.txtNomeFunc.Location = new System.Drawing.Point(22, 39);
-            this.txtNomeFunc.Name = "txtNomeFunc";
-            this.txtNomeFunc.Size = new System.Drawing.Size(174, 24);
-            this.txtNomeFunc.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Cargo:";
-            // 
-            // txtCargoFunc
-            // 
-            this.txtCargoFunc.Location = new System.Drawing.Point(22, 93);
-            this.txtCargoFunc.Name = "txtCargoFunc";
-            this.txtCargoFunc.Size = new System.Drawing.Size(174, 24);
-            this.txtCargoFunc.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 19);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Data de Contratação:";
-            // 
-            // mtxtContratacaoFunc
-            // 
-            this.mtxtContratacaoFunc.Location = new System.Drawing.Point(22, 147);
-            this.mtxtContratacaoFunc.Mask = "00/00/0000";
-            this.mtxtContratacaoFunc.Name = "mtxtContratacaoFunc";
-            this.mtxtContratacaoFunc.Size = new System.Drawing.Size(174, 24);
-            this.mtxtContratacaoFunc.TabIndex = 5;
-            this.mtxtContratacaoFunc.ValidatingType = typeof(System.DateTime);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 176);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 19);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Salário:";
-            // 
-            // txtSalarioFunc
-            // 
-            this.txtSalarioFunc.Location = new System.Drawing.Point(22, 200);
-            this.txtSalarioFunc.Name = "txtSalarioFunc";
-            this.txtSalarioFunc.Size = new System.Drawing.Size(174, 24);
-            this.txtSalarioFunc.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(223, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 19);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Telefone:";
-            // 
-            // txtTelefoneFunc
-            // 
-            this.txtTelefoneFunc.Location = new System.Drawing.Point(227, 39);
-            this.txtTelefoneFunc.Name = "txtTelefoneFunc";
-            this.txtTelefoneFunc.Size = new System.Drawing.Size(174, 24);
-            this.txtTelefoneFunc.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(223, 68);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 19);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Email:";
-            // 
-            // txtEmailFunc
-            // 
-            this.txtEmailFunc.Location = new System.Drawing.Point(227, 93);
-            this.txtEmailFunc.Name = "txtEmailFunc";
-            this.txtEmailFunc.Size = new System.Drawing.Size(174, 24);
-            this.txtEmailFunc.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(223, 122);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 19);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Endereço:";
-            // 
-            // txtEnderecoFunc
-            // 
-            this.txtEnderecoFunc.Location = new System.Drawing.Point(227, 147);
-            this.txtEnderecoFunc.Name = "txtEnderecoFunc";
-            this.txtEnderecoFunc.Size = new System.Drawing.Size(174, 24);
-            this.txtEnderecoFunc.TabIndex = 13;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(223, 176);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(157, 19);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Data de Nascimento:";
-            // 
-            // mtxtNascFunc
-            // 
-            this.mtxtNascFunc.Location = new System.Drawing.Point(227, 200);
-            this.mtxtNascFunc.Mask = "00/00/0000";
-            this.mtxtNascFunc.Name = "mtxtNascFunc";
-            this.mtxtNascFunc.Size = new System.Drawing.Size(174, 24);
-            this.mtxtNascFunc.TabIndex = 15;
-            this.mtxtNascFunc.ValidatingType = typeof(System.DateTime);
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(428, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 19);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Observações:";
-            // 
-            // txtObservFunc
-            // 
-            this.txtObservFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtObservFunc.Location = new System.Drawing.Point(432, 39);
-            this.txtObservFunc.Multiline = true;
-            this.txtObservFunc.Name = "txtObservFunc";
-            this.txtObservFunc.Size = new System.Drawing.Size(174, 185);
-            this.txtObservFunc.TabIndex = 17;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(20, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(147, 19);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Pesquisar por nome:";
             // 
             // frmFuncionario
             // 
@@ -395,6 +471,9 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaFunc)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaExFunc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -429,5 +508,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNomeFunc;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dgvConsultaExFunc;
+        private System.Windows.Forms.Button btnRealocarFunc;
+        private System.Windows.Forms.TextBox txtExFunc;
+        private System.Windows.Forms.Label label11;
     }
 }
