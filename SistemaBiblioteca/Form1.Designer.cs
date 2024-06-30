@@ -70,6 +70,7 @@
             this.btnAutores.TabIndex = 1;
             this.btnAutores.Text = "Autores";
             this.btnAutores.UseVisualStyleBackColor = false;
+            this.btnAutores.Click += new System.EventHandler(this.btnAutores_Click);
             // 
             // btnEditores
             // 

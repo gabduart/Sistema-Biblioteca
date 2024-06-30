@@ -33,5 +33,11 @@ namespace SistemaBiblioteca
             frmFuncionario form = new frmFuncionario();
             form.ShowDialog();
         }
+
+        private void btnAutores_Click(object sender, EventArgs e)
+        {
+            frmAutor form = new frmAutor();
+            form.ShowDialog();
+        }
     }
 }
