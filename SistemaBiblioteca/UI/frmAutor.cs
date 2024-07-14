@@ -115,10 +115,10 @@ namespace SistemaBiblioteca.UI
                 authDAL.Update(auth);
                 MessageBox.Show("Dados gravados com sucesso!");
 
-                btnCadastrarAutor.Text = "Atualizar";
-                btnCadastrarAutor.Width += 20;
-                btnCadastrarAutor.Left -= 20;
-                btnLimparAutor.Left -= 20;
+                btnCadastrarAutor.Text = "Cadastrar";
+                btnCadastrarAutor.Width -= 20;
+                btnCadastrarAutor.Left += 20;
+                btnLimparAutor.Left += 20;
 
                 txtNomeAutor.Focus();
             } 
