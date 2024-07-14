@@ -31,6 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.refImageEditor = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLimparEditor = new System.Windows.Forms.Button();
             this.btnCadastrarEditor = new System.Windows.Forms.Button();
             this.txtNomeEditor = new System.Windows.Forms.TextBox();
@@ -41,12 +42,11 @@
             this.btnEditarEditor = new System.Windows.Forms.Button();
             this.txtConsultaEditor = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaEditor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -90,6 +90,16 @@
             this.refImageEditor.Text = "Home illustrations by Storyset";
             this.refImageEditor.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.refImageEditor_LinkClicked);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaBiblioteca.Properties.Resources.Editing_body_text_amico;
+            this.pictureBox1.Location = new System.Drawing.Point(365, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 225);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnLimparEditor
             // 
             this.btnLimparEditor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -104,6 +114,7 @@
             this.btnLimparEditor.TabIndex = 19;
             this.btnLimparEditor.Text = "Limpar";
             this.btnLimparEditor.UseVisualStyleBackColor = false;
+            this.btnLimparEditor.Click += new System.EventHandler(this.btnLimparEditor_Click);
             this.btnLimparEditor.MouseLeave += new System.EventHandler(this.btnLimparEditor_MouseLeave);
             this.btnLimparEditor.MouseHover += new System.EventHandler(this.btnLimparEditor_MouseHover);
             // 
@@ -121,6 +132,7 @@
             this.btnCadastrarEditor.TabIndex = 18;
             this.btnCadastrarEditor.Text = "Cadastrar";
             this.btnCadastrarEditor.UseVisualStyleBackColor = false;
+            this.btnCadastrarEditor.Click += new System.EventHandler(this.btnCadastrarEditor_Click);
             this.btnCadastrarEditor.MouseLeave += new System.EventHandler(this.btnCadastrarEditor_MouseLeave);
             this.btnCadastrarEditor.MouseHover += new System.EventHandler(this.btnCadastrarEditor_MouseHover);
             // 
@@ -187,6 +199,7 @@
             this.btnExcluirEditor.TabIndex = 21;
             this.btnExcluirEditor.Text = "Excluir";
             this.btnExcluirEditor.UseVisualStyleBackColor = false;
+            this.btnExcluirEditor.Click += new System.EventHandler(this.btnExcluirEditor_Click);
             this.btnExcluirEditor.MouseLeave += new System.EventHandler(this.btnExcluirEditor_MouseLeave);
             this.btnExcluirEditor.MouseHover += new System.EventHandler(this.btnExcluirEditor_MouseHover);
             // 
@@ -204,6 +217,7 @@
             this.btnEditarEditor.TabIndex = 20;
             this.btnEditarEditor.Text = "Editar";
             this.btnEditarEditor.UseVisualStyleBackColor = false;
+            this.btnEditarEditor.Click += new System.EventHandler(this.btnEditarEditor_Click);
             this.btnEditarEditor.MouseLeave += new System.EventHandler(this.btnEditarEditor_MouseLeave);
             this.btnEditarEditor.MouseHover += new System.EventHandler(this.btnEditarEditor_MouseHover);
             // 
@@ -215,6 +229,7 @@
             this.txtConsultaEditor.Name = "txtConsultaEditor";
             this.txtConsultaEditor.Size = new System.Drawing.Size(338, 24);
             this.txtConsultaEditor.TabIndex = 2;
+            this.txtConsultaEditor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtConsultaEditor_KeyUp);
             // 
             // label10
             // 
@@ -224,16 +239,6 @@
             this.label10.Size = new System.Drawing.Size(147, 19);
             this.label10.TabIndex = 1;
             this.label10.Text = "Pesquisar por nome:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SistemaBiblioteca.Properties.Resources.Editing_body_text_amico;
-            this.pictureBox1.Location = new System.Drawing.Point(365, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 225);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
             // 
             // frmEditor
             // 
@@ -249,10 +254,10 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaEditor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

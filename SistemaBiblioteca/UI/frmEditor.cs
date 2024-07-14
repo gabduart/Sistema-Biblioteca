@@ -93,5 +93,80 @@ namespace SistemaBiblioteca.UI
         {
             Hover(btnEditarEditor, "Transparent", "Black");
         }
+
+        private void btnLimparEditor_Click(object sender, EventArgs e)
+        {
+            FormClear();
+            txtNomeEditor.Focus();
+        }
+
+        private void btnCadastrarEditor_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNomeEditor.Text))
+            {
+                MessageBox.Show("Todos os campos devem ser preenchidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            ed.NomeEditor = txtNomeEditor.Text;
+
+            if(btnCadastrarEditor.Text == "Atualizar")
+            {
+                edDAL.Update(ed);
+                MessageBox.Show("Dados gravados com sucesso!");
+
+                btnCadastrarEditor.Text = "Cadastrar";
+                btnCadastrarEditor.Width -= 20;
+                btnCadastrarEditor.Left += 20;
+                btnLimparEditor.Left += 20;
+
+                txtNomeEditor.Focus();
+            } 
+            else
+            {
+                edDAL.Register(ed);
+                MessageBox.Show("Dados gravados com sucesso!");
+                txtNomeEditor.Focus();
+            }
+
+            FormClear();
+            dgvConsultaEditor.DataSource = edDAL.Consult();
+        }
+
+        private void btnExcluirEditor_Click(object sender, EventArgs e)
+        {
+            if(dgvConsultaEditor.RowCount > 0)
+            {
+                if(MessageBox.Show("Deseja excluir o editor permanentemente?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    ed.EditorId = Convert.ToInt16(dgvConsultaEditor[0, dgvConsultaEditor.CurrentRow.Index].Value);
+                    edDAL.Delete(ed);
+                    dgvConsultaEditor.DataSource = edDAL.Consult();
+                }
+            }
+        }
+
+        private void txtConsultaEditor_KeyUp(object sender, KeyEventArgs e)
+        {
+            ed.NomeEditor = txtConsultaEditor.Text;
+            dgvConsultaEditor.DataSource = edDAL.Search(ed);
+        }
+
+        private void btnEditarEditor_Click(object sender, EventArgs e)
+        {
+            if(dgvConsultaEditor.RowCount > 0)
+            {
+                ed.EditorId = Convert.ToInt16(dgvConsultaEditor[0, dgvConsultaEditor.CurrentRow.Index].Value);
+                ed = edDAL.Return(ed);
+                txtNomeEditor.Text = ed.NomeEditor;
+
+                tabControl1.SelectedTab = tabPage1;
+
+                btnCadastrarEditor.Text = "Atualizar";
+                btnCadastrarEditor.Width += 20;
+                btnCadastrarEditor.Left -= 20;
+                btnLimparEditor.Left -= 20;
+            }
+        }
     }
 }
