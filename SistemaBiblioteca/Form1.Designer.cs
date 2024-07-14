@@ -87,6 +87,7 @@
             this.btnEditores.TabIndex = 2;
             this.btnEditores.Text = "Editores";
             this.btnEditores.UseVisualStyleBackColor = false;
+            this.btnEditores.Click += new System.EventHandler(this.btnEditores_Click);
             // 
             // btnCategorias
             // 

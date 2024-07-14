@@ -39,5 +39,11 @@ namespace SistemaBiblioteca
             frmAutor form = new frmAutor();
             form.ShowDialog();
         }
+
+        private void btnEditores_Click(object sender, EventArgs e)
+        {
+            frmEditor form = new frmEditor();
+            form.ShowDialog();
+        }
     }
 }
