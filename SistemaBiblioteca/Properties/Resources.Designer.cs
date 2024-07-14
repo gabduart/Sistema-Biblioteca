@@ -83,6 +83,16 @@ namespace SistemaBiblioteca.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Editing_body_text_amico {
+            get {
+                object obj = ResourceManager.GetObject("Editing body text-amico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Reading_glasses_cuate {
             get {
                 object obj = ResourceManager.GetObject("Reading glasses-cuate", resourceCulture);

@@ -47,9 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\Autor.cs" />
+    <Compile Include="BLL\Editores.cs" />
     <Compile Include="BLL\Funcionario.cs" />
     <Compile Include="DAL\AutorDAL.cs" />
     <Compile Include="DAL\Connection.cs" />
+    <Compile Include="DAL\EditoresDAL.cs" />
     <Compile Include="DAL\FuncionarioDAL.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -64,6 +66,12 @@
     </Compile>
     <Compile Include="UI\frmAutor.Designer.cs">
       <DependentUpon>frmAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmEditor.Designer.cs">
+      <DependentUpon>frmEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmFuncionario.cs">
       <SubType>Form</SubType>
@@ -86,6 +94,9 @@
     </Compile>
     <EmbeddedResource Include="UI\frmAutor.resx">
       <DependentUpon>frmAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmEditor.resx">
+      <DependentUpon>frmEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmFuncionario.resx">
       <DependentUpon>frmFuncionario.cs</DependentUpon>
@@ -111,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Reading glasses-cuate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editing body text-amico.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
